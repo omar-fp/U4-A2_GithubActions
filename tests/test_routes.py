@@ -8,12 +8,15 @@ class RoutesTestCase(unittest.TestCase):
         self.client = self.app.test_client()
         self.ctx = self.app.app_context()
         self.ctx.push()
+        
+        db.create_all()
 
     def tearDown(self):
+        db.session.remove()
+        db.drop_all()
         self.ctx.pop()
 
     def test_index_access(self):
-
         resp = self.client.get('/')
         self.assertEqual(resp.status_code, 200)
 
