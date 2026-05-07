@@ -1,0 +1,6 @@
+{% extends "maestra.html" %}
+{% block content %}
+    <h1>400 - Mala petición</h1>
+    <p>El servidor no pudo entender la solicitud del navegador debido a una sintaxis incorrecta, datos corruptos, cookies obsoletas o una URL mal escrita.</p>
+    <a href="{{ url_for('juegos') }}">Volver al inicio</a>
+{% endblock %}
