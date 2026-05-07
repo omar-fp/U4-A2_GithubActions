@@ -7,3 +7,5 @@ sentry-sdk
 Werkzeug
 pytest
 pytest-cov
+PyMySQL
+cryptography
