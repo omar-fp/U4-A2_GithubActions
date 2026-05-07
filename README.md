@@ -20,3 +20,10 @@ Solución:
 - Reto 3: Error de autenticación en la conexión a la base de datos durante las pruebas.
 Al ejecutar el código ya modificado se mostró una ventana de error de acceso, esto debido a que tengo 2 lineas de codigo de conexión dentro de mi app.py por temas de configuración en mis dispositivos en el XAMPP
 Solución: Se identificó que el entorno de pruebas estaba intentando acceder a MySQL utilizando una configuración sin contraseña, la cual no coincidía con el entorno local actual (laptop). Se resolvió comentando y descomentando dinámicamente la variable.
+
+
+
+-- U4 - A2 Integración Continua con GitHub Actions
+
+![CI](https://github.com/omar-fp/U4-A2_GithubActions/actions/workflows/ci.yml/badge.svg)
+[![Coverage](https://codecov.io/gh/omar-fp/U4-A2_GithubActions/branch/main/graph/badge.svg)](https://codecov.io/gh/omar-fp/U4-A2_GithubActions)
