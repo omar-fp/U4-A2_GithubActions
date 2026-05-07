@@ -26,4 +26,4 @@ Solución: Se identificó que el entorno de pruebas estaba intentando acceder a 
 -- U4 - A2 Integración Continua con GitHub Actions
 
 ![CI](https://github.com/omar-fp/U4-A2_GithubActions/actions/workflows/ci.yml/badge.svg)
-[![Coverage](https://codecov.io/gh/omar-fp/U4-A2_GithubActions/branch/main/graph/badge.svg)](https://codecov.io/gh/omar-fp/U4-A2_GithubActions)
+[![codecov](https://codecov.io/github/omar-fp/u4-a2_githubactions/graph/badge.svg?token=BTS04YKA2I)](https://codecov.io/github/omar-fp/u4-a2_githubactions)
