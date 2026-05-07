@@ -9,8 +9,11 @@ class ModelTestCase(unittest.TestCase):
         self.ctx = self.app.app_context()
         self.ctx.push()
 
+        db.create_all()
+
     def tearDown(self):
-        db.session.rollback()
+        db.session.remove()
+        db.drop_all()
         self.ctx.pop()
 
     def test_juego_creation(self):
@@ -24,7 +27,6 @@ class ModelTestCase(unittest.TestCase):
         # Verificamos que ahora haya 1 juego más
         self.assertEqual(Juego.query.count(), conteo_inicial + 1)
 
-        # Se borra
         db.session.delete(j)
         db.session.commit()
 

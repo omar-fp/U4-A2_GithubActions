@@ -10,13 +10,15 @@ class APITestCase(unittest.TestCase):
         self.ctx = self.app.app_context()
         self.ctx.push()
         
+        db.create_all() 
+    
         self.juego_prueba = Juego(nombre='Test_API', descripcion='Prueba', precio=10.00)
         db.session.add(self.juego_prueba)
         db.session.commit()
 
     def tearDown(self):
-        db.session.delete(self.juego_prueba)
-        db.session.commit()
+        db.session.remove()
+        db.drop_all() 
         self.ctx.pop()
 
     def test_get_juegos(self):
@@ -27,4 +29,5 @@ class APITestCase(unittest.TestCase):
         self.assertIsInstance(data, list)
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main()
